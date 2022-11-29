@@ -5,11 +5,11 @@ import behance from "../public/img/behance.svg";
 import Image from "next/image";
 import Link from "next/link";
 
-const SocialNavStyled = styled.nav`
+const SocialNavStyled = styled.menu`
   width: 100vw;
   height: 42px;
   position: fixed;
-  z-index: 500;
+  z-index: 800;
   top: 0;
   left: 20px;
   display: flex;
@@ -25,11 +25,16 @@ const Container = styled.div`
 
 const SocialStyled = styled.div`
   & img {
-    opacity: 0.7;
-  }
-
-  & :hover img {
     opacity: 1;
+  }
+  @media (min-width: 715px) {
+    & img {
+      opacity: 0.7;
+    }
+
+    & :hover img {
+      opacity: 1;
+    }
   }
 `;
 

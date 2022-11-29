@@ -1,11 +1,13 @@
 // @refresh reset
 import { useEffect, useState } from "react";
+import { HeadMetas } from "../components/HeadMetas";
 import { Title } from "../components/Title";
-import { Container } from "../components/styled/Bg";
+import { Container } from "../components/styled/Container";
 import { Grid } from "../components/styled/Grid";
 import { Card } from "../components/Card";
 import { Wheel } from "../components/Wheel";
 import { SocialNav } from "../components/SocialNav";
+import { ToTop } from "../components/ToTop";
 import { createGlobalStyle } from "styled-components";
 import bg from "../public/img/bg.jpg";
 import drinkergame from "../public/img/drinker.jpg";
@@ -59,6 +61,8 @@ export default function Home() {
   const [translateY, setTranslateY] = useState(0);
   const [rotation, setRotation] = useState(0);
 
+  const handleToTop = () => window.scrollTo({ top: 0, behavior: "smooth" });
+
   const funcScroll = () => {
     setTranslateX(
       `${
@@ -87,6 +91,8 @@ export default function Home() {
   return (
     <>
       <GlobalStyle />
+      <HeadMetas />
+      <SocialNav />
       <Title translateY={translateY} />
       <Container translateX={translateX} translateY={translateY}>
         <Grid>
@@ -141,8 +147,8 @@ export default function Home() {
           <Card image={eligetusuerte.src} href="https://eligetusuerte.es/" />
         </Grid>
       </Container>
-      <Wheel rotation={rotation} />
-      <SocialNav />
+      <Wheel rotation={rotation} translateY={translateY} />
+      <ToTop handleToTop={handleToTop} />
     </>
   );
 }

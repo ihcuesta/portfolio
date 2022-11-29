@@ -4,6 +4,7 @@ import Image from "next/image";
 import logo from "../public/img/ih.png";
 import html from "../public/img/html.svg";
 import css from "../public/img/css.svg";
+import sass from "../public/img/sass.svg";
 import js from "../public/img/js.svg";
 import react from "../public/img/react.svg";
 import redux from "../public/img/redux.svg";
@@ -76,7 +77,7 @@ const Name = styled.h1`
 const Role = styled.h2`
   color: pink;
   font-weight: 800;
-  font-size: 1rem;
+  font-size: 1.1rem;
   color: #fa0081;
 `;
 
@@ -126,6 +127,7 @@ export function Title({ translateY }) {
               },
             }}
           />
+          <Image src={sass.src} alt="SASS" width={24} height={24} />
           <Image src={js.src} alt="JS" width={24} height={24} />
           <Icon
             icon={react.src}

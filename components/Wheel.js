@@ -11,7 +11,7 @@ export const WheelStyled = styled.div`
   right: auto;
   bottom: auto;
   background: url(${react.src}) no-repeat center / contain;
-  opacity: 0.3;
+  opacity: ${(props) => (props.translateY < -165 ? 0.6 : 0.3)};
   filter: brightness(50%);
   display: block;
   @media (min-width: 715px) {
@@ -33,9 +33,10 @@ export const WheelStyled = styled.div`
   }
 `;
 
-export function Wheel({ rotation }) {
+export function Wheel({ rotation, translateY }) {
   return (
     <WheelStyled
+      translateY={translateY}
       as={motion.div}
       animate={{
         rotate: rotation,

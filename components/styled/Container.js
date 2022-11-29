@@ -11,9 +11,10 @@ export const Container = styled.main`
   overflow: visible;
   transform-style: preserve-3d;
   top: 250px;
-  width: min(740px, 100vw);
+  width: 110%;
   padding: 300px 20px 0;
   @media (min-width: 715px) {
+    width: min(740px, 100vw);
     top: 0;
     transform: translateX(${(props) => props.translateX})
       translateY(${(props) => props.translateY}px) rotateX(-45deg)
