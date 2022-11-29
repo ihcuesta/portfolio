@@ -1,6 +1,6 @@
 # Portfolio
 
-I was looking for a different way to scroll down along a grid. A [Next.js](https://nextjs.org/) project bootstrapped with `create-next-app`.
+I was looking for a different way to scroll down along a grid, a 3D effect achieved by CSS transform and scroll events. A [Next.js](https://nextjs.org/) project bootstrapped with `create-next-app`.
 
 Hosted in GitHub Pages: [https://ihcuesta.github.io/portfolio/](https://ihcuesta.github.io/portfolio/).
 
