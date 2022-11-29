@@ -6,6 +6,7 @@ Hosted in GitHub Pages: [https://ihcuesta.github.io/portfolio/](https://ihcuesta
 
 ## Technologies
 
-- [Next.js](https://nextjs.org/)
+- [React](https://es.reactjs.org/)
+- [Next](https://nextjs.org/)
 - [Styled Components](https://www.styled-components.com/)
 - [Framer Motion](https://www.framer.com/motion/)
