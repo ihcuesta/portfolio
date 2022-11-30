@@ -36,7 +36,6 @@ const GlobalStyle = createGlobalStyle`
     padding: 0;
     box-sizing: border-box;
     transform-origin: top right 0px;
-    overflow: scroll;
     font-family: "Lexend Mega";
   }
 
