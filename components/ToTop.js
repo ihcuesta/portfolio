@@ -6,8 +6,8 @@ const ChevronContainer = styled.div`
   height: 50px;
   position: fixed;
   z-index: 500;
-  bottom: 0;
-  right: 35px;
+  bottom: -8px;
+  right: 12px;
   border-radius: 50px;
   cursor: pointer;
   background: rgba(250, 0, 129, 0.3);
