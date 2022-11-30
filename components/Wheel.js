@@ -2,7 +2,14 @@ import styled from "styled-components";
 import { motion } from "framer-motion";
 import react from "../public/img/react.svg";
 
-export const WheelStyled = styled.div`
+const Cont = styled.div`
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  -webkit-transform: translate3d(0, 0, -6000px);
+`;
+
+const WheelStyled = styled.div`
   width: 500px;
   height: 500px;
   position: fixed;
@@ -35,16 +42,18 @@ export const WheelStyled = styled.div`
 
 export function Wheel({ rotation, translateY }) {
   return (
-    <WheelStyled
-      translateY={translateY}
-      as={motion.div}
-      animate={{
-        rotate: rotation,
-        origin: 0,
-        transition: {
-          ease: "linear",
-        },
-      }}
-    />
+    <Cont>
+      <WheelStyled
+        translateY={translateY}
+        as={motion.div}
+        animate={{
+          rotate: rotation,
+          origin: 0,
+          transition: {
+            ease: "linear",
+          },
+        }}
+      />
+    </Cont>
   );
 }
