@@ -102,7 +102,7 @@ export default function Home() {
           />
           <Card
             image={qapter.src}
-            href="https://ivanherranz.com/qapter-landing/"
+            href="https://ihcuesta.github.io/qapter-landing"
           />
           <Card
             image={pikachu.src}
