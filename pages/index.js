@@ -1,34 +1,35 @@
 // @refresh reset
-import { useEffect, useState } from "react";
-import { HeadMetas } from "../components/HeadMetas";
-import { Title } from "../components/Title";
-import { Container } from "../components/styled/Container";
-import { Grid } from "../components/styled/Grid";
-import { Card } from "../components/Card";
-import { Wheel } from "../components/Wheel";
-import { SocialNav } from "../components/SocialNav";
-import { ToTop } from "../components/ToTop";
-import { createGlobalStyle } from "styled-components";
-import bg from "../public/img/bg.jpg";
-import drinkergame from "../public/img/drinker.jpg";
-import qapter from "../public/img/qapter.jpeg";
-import pikachu from "../public/img/pikachu.gif";
-import hikeat from "../public/img/hikeat.gif";
-import digidentity from "../public/img/digidentity.jpeg";
-import blackmirror from "../public/img/blackmirror.jpeg";
-import nature from "../public/img/nature.jpeg";
-import valak from "../public/img/valak.jpeg";
-import skyscanner from "../public/img/skyscanner.jpeg";
-import olea from "../public/img/olea.jpeg";
-import tuvidafacil from "../public/img/tuvidafacil.jpeg";
-import yavoz from "../public/img/yavoz.jpeg";
-import medcafe from "../public/img/medcafe.jpeg";
-import mediterranea from "../public/img/mediterranea.jpeg";
-import casanostre from "../public/img/casanostre.jpeg";
-import eligetusuerte from "../public/img/eligetusuerte.jpeg";
-import "@fontsource/lexend-mega";
-import "@fontsource/lexend-mega/900.css";
-import "@fontsource/lexend-mega/800.css";
+import { useEffect, useState } from 'react'
+import { HeadMetas } from '../components/HeadMetas'
+import { Title } from '../components/Title'
+import { Container } from '../components/styled/Container'
+import { Grid } from '../components/styled/Grid'
+import { Card } from '../components/Card'
+import { Wheel } from '../components/Wheel'
+import { SocialNav } from '../components/SocialNav'
+import { ToTop } from '../components/ToTop'
+import { createGlobalStyle } from 'styled-components'
+import bg from '../public/img/bg.jpg'
+import drinkergame from '../public/img/drinker.jpg'
+import qapter from '../public/img/qapter.jpeg'
+import pikachu from '../public/img/pikachu.gif'
+import hikeat from '../public/img/hikeat.gif'
+import digidentity from '../public/img/digidentity.jpeg'
+import blackmirror from '../public/img/blackmirror.jpeg'
+import nature from '../public/img/nature.jpeg'
+import valak from '../public/img/valak.jpeg'
+import skyscanner from '../public/img/skyscanner.jpeg'
+import olea from '../public/img/olea.jpeg'
+import tuvidafacil from '../public/img/tuvidafacil.jpeg'
+import yavoz from '../public/img/yavoz.jpeg'
+import medcafe from '../public/img/medcafe.jpeg'
+import mediterranea from '../public/img/mediterranea.jpeg'
+import casanostre from '../public/img/casanostre.jpeg'
+import eligetusuerte from '../public/img/eligetusuerte.jpeg'
+import poquiz from '../public/img/poquiz.jpg'
+import '@fontsource/lexend-mega'
+import '@fontsource/lexend-mega/900.css'
+import '@fontsource/lexend-mega/800.css'
 
 const GlobalStyle = createGlobalStyle`
   * {
@@ -53,14 +54,14 @@ const GlobalStyle = createGlobalStyle`
       height: 1800px;
     }
   }
-`;
+`
 
 export default function Home() {
-  const [translateX, setTranslateX] = useState(0);
-  const [translateY, setTranslateY] = useState(0);
-  const [rotation, setRotation] = useState(0);
+  const [translateX, setTranslateX] = useState(0)
+  const [translateY, setTranslateY] = useState(0)
+  const [rotation, setRotation] = useState(0)
 
-  const handleToTop = () => window.scrollTo({ top: 0, behavior: "smooth" });
+  const handleToTop = () => window.scrollTo({ top: 0, behavior: 'smooth' })
 
   const funcScroll = () => {
     setTranslateX(
@@ -68,24 +69,24 @@ export default function Home() {
         Math.floor(window.pageYOffset) * 0.515 +
         (window.innerWidth < 715 ? 0.4 : 0.6) * window.innerWidth
       }px`
-    );
-    setTranslateY(-Math.floor(window.pageYOffset));
-    setRotation((window.pageYOffset / window.innerWidth) * 360);
-  };
+    )
+    setTranslateY(-Math.floor(window.pageYOffset))
+    setRotation((window.pageYOffset / window.innerWidth) * 360)
+  }
 
-  useEffect(() => funcScroll(), []);
-
-  useEffect(() => {
-    window.addEventListener("scroll", () => funcScroll());
-    return window.removeEventListener("scroll", () => funcScroll());
-  }, []);
+  useEffect(() => funcScroll(), [])
 
   useEffect(() => {
-    addEventListener("resize", () => {
-      funcScroll();
-      return window.removeEventListener("resize", () => funcScroll());
-    });
-  }, []);
+    window.addEventListener('scroll', () => funcScroll())
+    return window.removeEventListener('scroll', () => funcScroll())
+  }, [])
+
+  useEffect(() => {
+    addEventListener('resize', () => {
+      funcScroll()
+      return window.removeEventListener('resize', () => funcScroll())
+    })
+  }, [])
 
   return (
     <>
@@ -95,23 +96,25 @@ export default function Home() {
       <Title translateY={translateY} />
       <Container translateX={translateX} translateY={translateY}>
         <Grid>
-          <Card
-            image={drinkergame.src}
-            href="https://ihcuesta.github.io/drinker-game/"
-          />
+          <Card image={poquiz.src} href="https://ihcuesta.github.io/poquiz/" />
           <Card
             image={qapter.src}
             href="https://ihcuesta.github.io/qapter-landing"
           />
           <Card
-            image={pikachu.src}
-            href="https://ihcuesta.github.io/pokemon_iron_edition/"
+            image={drinkergame.src}
+            href="https://ihcuesta.github.io/drinker-game/"
           />
-          <Card image={hikeat.src} href="https://hikeat.herokuapp.com/" />
           <Card
             image={digidentity.src}
             href="https://ihcuesta.github.io/digidentity/"
           />
+          {/* <Card image={hikeat.src} href="https://hikeat.herokuapp.com/" /> */}
+          <Card
+            image={pikachu.src}
+            href="https://ihcuesta.github.io/pokemon_iron_edition/"
+          />
+
           <Card
             image={blackmirror.src}
             href="https://ihcuesta.github.io/blackmirror/"
@@ -149,5 +152,5 @@ export default function Home() {
       <Wheel rotation={rotation} translateY={translateY} />
       <ToTop handleToTop={handleToTop} />
     </>
-  );
+  )
 }
