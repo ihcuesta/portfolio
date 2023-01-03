@@ -96,7 +96,7 @@ export default function Home() {
       <Title translateY={translateY} />
       <Container translateX={translateX} translateY={translateY}>
         <Grid>
-          <Card image={poquiz.src} href="https://ihcuesta.github.io/poquiz/" />
+          <Card image={poquiz.src} href="https://poquiz.vercel.app/#/" />
           <Card
             image={qapter.src}
             href="https://ihcuesta.github.io/qapter-landing"
